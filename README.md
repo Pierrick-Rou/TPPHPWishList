@@ -4,12 +4,15 @@ télécharger WampServeur
 
 Créer un projet symfony :
   cd puis la localisation
+  
   créer le dossier :
     symfony new NouveauPojet --version=lts --webapp
   lancer le serveur :
     symfony serve
+    
   Creer un controller :
     symfony console make::controller NewController
+    
   créer le dossier entity (pour les classes):
      symfony console make:entity   
 
@@ -21,7 +24,11 @@ Créer un projet symfony :
     ensuite sur la database sur la droite + -> data source ->my SQL
 
   pour générer un jeu de données fictives :
-     symfony console make:fixtures
+    symfony composer require
+    symfony console make:fixtures
+    symfony composer req fakerphp/faker  --dev
+    symfony console doctrine:fixtures:load
+     
 
 
 //installer Composer
