@@ -12,6 +12,15 @@
         {% endblock %}
     </head>
     <body>
+
+    <nav  class="navbar">
+        <div class="logo">Ma wishlist</div>
+        <ul class="nav-links">
+            <li><a href="{{ path('wishAccueil') }}">Home</a></li>
+            <li><a href="{{ path('wishList') }}">Liste des voeux</a></li>
+            <li><a href="{{ path('wishAdd') }}">Faire un voeux</a></li>
+        </ul>
+    </nav>
         {% block body %}{% endblock %}
     </body>
 </html>

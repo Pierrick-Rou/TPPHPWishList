@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Auteur</th>
+            <th>Date de création</th>
+            <th>Category</th>
+        </tr>
+    {% for wish in wishes %}
+
+            <tr>
+                <td>{{ wish.id }}</td>
+                <td>{{ wish.name }}</td>
+                <td>{{ wish.description }}</td>
+                <td>{{ wish.author }}</td>
+                <td>{{ wish.createdDate|date('d/m/y') }}</td>
+                <td>{% for category in wish.categories  %}
+                {{ category.name }},  {% endfor %}
+                </td>
+                <td><a href="{{ path('detail', {id: wish.id}) }}">détails</a></td>
+
+            </tr>
+
+    {%  endfor %}
+    </table>
+{% endblock %}
