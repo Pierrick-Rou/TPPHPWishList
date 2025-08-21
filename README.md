@@ -29,6 +29,8 @@ Créer un projet symfony :
     symfony composer req fakerphp/faker  --dev
     symfony console doctrine:fixtures:load
      
+  Créer un form à travers symfony :
+     symfony console make:form   
 
 
 //installer Composer
